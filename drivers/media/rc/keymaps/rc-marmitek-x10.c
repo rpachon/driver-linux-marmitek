@@ -59,8 +59,8 @@ static void __exit exit_rc_map_marmitek_x10(void)
 	rc_map_unregister(&marmitek_x10_map);
 }
 
-module_init(init_rc_map_marmitek_x10)
-module_exit(exit_rc_map_marmitek_x10)
+module_init(init_rc_map_marmitek_x10);
+module_exit(exit_rc_map_marmitek_x10);
 
 MODULE_LICENSE("GPL");
-MODULE_AUTHOR("RPachon");
+MODULE_AUTHOR("Remi Pachon <remi.pachon@gmail.com>");
