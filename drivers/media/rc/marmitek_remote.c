@@ -761,7 +761,7 @@ static int marmitek_remote_probe(struct usb_interface *interface,
     }
 
     marmitek_remote = kzalloc(sizeof (struct marmitek_remote), GFP_KERNEL);
-    rc_dev = rc_allocate_device();
+    rc_dev = rc_allocate_device(RC_DRIVER_SCANCODE);
     if (!marmitek_remote || !rc_dev)
         goto exit_free_dev_rdev;
 
