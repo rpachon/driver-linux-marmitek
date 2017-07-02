@@ -1,16 +1,6 @@
-VERSION = 2
-PATCHLEVEL = 6
-SUBLEVEL = 35
-EXTRAVERSION = .13-ubuntu1
-NAME=Crazed Snow-Weasel
-
 ifneq ($(KERNELRELEASE),)
-#
-# Make rules for use from within 2.6 kbuild system
-#
-obj-m    += rc-marmitek-x10.o
 
-EXTRA_CFLAGS=-I/home/stan/linux-source-3.8.0/include/media
+obj-m    += rc-marmitek-x10.o
 
 else  # We were called from command line
 

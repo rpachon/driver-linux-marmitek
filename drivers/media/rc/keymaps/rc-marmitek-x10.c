@@ -5,6 +5,8 @@
 #include <linux/module.h>
 #include <media/rc-map.h>
 
+#define RC_MAP_MARMITEK_X10 "rc-marmitek-x10"
+
 static struct rc_map_table marmitek_x10[] = {
 	{ 0xf00f, KEY_S }, // Power
 	{ 0xd22d, KEY_LEFT },

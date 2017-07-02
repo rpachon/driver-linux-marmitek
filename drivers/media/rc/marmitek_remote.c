@@ -18,6 +18,8 @@
  * Module and Version Information, Module Parameters
  */
 
+#define RC_MAP_MARMITEK_X10 "rc-marmitek-x10"
+
 #define MARMITEK_REMOTE_VENDOR_ID		0x0bc7
 #define MARMITEK_REMOTE_PRODUCT_ID		0x0005
 
