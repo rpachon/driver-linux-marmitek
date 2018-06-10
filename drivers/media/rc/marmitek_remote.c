@@ -478,7 +478,7 @@ static void marmitek_remote_input_report(struct urb *urb)
                     * it would cause ghost repeats which would be a
                     * regression for this driver.
                     */
-                    rc_keydown_notimeout(marmitek_remote->rdev, RC_TYPE_OTHER,
+                    rc_keydown_notimeout(marmitek_remote->rdev, RC_PROTO_OTHER,
                                          scancode, data[2]);
                     rc_keyup(marmitek_remote->rdev);
                 }
@@ -563,7 +563,7 @@ static void marmitek_remote_input_report(struct urb *urb)
                 "key data %02x %02x, scancode %02x\n",
                 data[3], data[4], scancode);
 
-        rc_keydown_notimeout(marmitek_remote->rdev, RC_TYPE_OTHER, scancode,
+        rc_keydown_notimeout(marmitek_remote->rdev, RC_PROTO_OTHER, scancode,
                              scancode);
         rc_keyup(marmitek_remote->rdev);
     }
@@ -675,13 +675,13 @@ static void marmitek_remote_rc_init(struct marmitek_remote *marmitek_remote)
 
     rdev->priv = marmitek_remote;
     rdev->driver_type = RC_DRIVER_SCANCODE;
-    rdev->allowed_protocols = RC_BIT_OTHER;
+    rdev->allowed_protocols = RC_PROTO_BIT_OTHER;
     rdev->driver_name = "marmitek_remote";
 
     rdev->open = marmitek_remote_rc_open;
     rdev->close = marmitek_remote_rc_close;
 
-    rdev->input_name = marmitek_remote->rc_name;
+    rdev->device_name = marmitek_remote->rc_name;
     rdev->input_phys = marmitek_remote->rc_phys;
 
     usb_to_input_id(marmitek_remote->udev, &rdev->input_id);

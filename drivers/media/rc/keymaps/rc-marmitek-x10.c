@@ -46,7 +46,7 @@ static struct rc_map_list marmitek_x10_map = {
 	.map = {
 		.scan    = marmitek_x10,
 		.size    = ARRAY_SIZE(marmitek_x10),
-		.rc_type = RC_TYPE_OTHER,
+		.rc_proto = RC_PROTO_OTHER,
 		.name    = RC_MAP_MARMITEK_X10,
 	}
 };
